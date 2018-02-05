@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>Train Scheduler</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		</head>
+	<body>
+		<!-- MODAL - first attempt at using a modal.  It is used to display:
+		WARNING - When a form field is empty, the modal will have a red border and text asking you to fill in all fields.
+		SUCCESS - When you fill out all fields and click submit, the record is added to the table and the modal displays with a green border and success text. -->
+		<div id="myModal" class="modal">
+			<div class="modal-content-1 rounded" id="modCont">
+				<div class="container modalCont">
+					<div class="row">
+						<div class="col-11 col-sm-11 col-md-11 pModal">
+							<img src="assets/images/chooChooChBoogie.gif" class="rounded" id="chooChooChBoogie">
+							<p></p>
+						</div>
+						<div class="col-1 col-sm-1 col-md-1 close">&times;</div>				
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">	
+			<!-- HEADER and INLINE FORM -->
+			<div class="row" id="header">
+				<div class="col-12 col-sm-6 col-lg-6">	
+					<h3>Current Time: <span id="currentTime"></span></h3>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-6">
+					<h1>Train Scheduler</h1>
+				</div>
+			</div>
+			<!-- Display Area for comedian name and gifs returned from GIPHY API -->
+			<div class="row">
+			<div id="formy" class="col-12 col-sm-3 col-lg-3">
+				<div class="row">
+					<form>
+						<h4 class="titleTh" id="title0">Add Train</h4>
+						<div class="form-group has-danger">
+							<label for="nameInput">Train Name </label>
+							<input type="text" name="trainName" class="form-control form-control-danger" id="nameInput" placeholder="Crazy Train">
+						</div>
+						<div class="form-group has-danger">
+							<label for="destInput">Destination</label>
+							<input type="text" name="trainDest" class="form-control form-control-danger" id="destInput" placeholder="Ozzyville">
+						</div>
+						<div class="form-group has-danger">
+							<label class="timeInput" for="timeInput">First Train Time</label><label class="milTime">(HH:mm - Military)</label>
+							<input type="text" name="trainFirst" class="form-control form-control-danger" id="timeInput" placeholder="00:00">
+						</div>
+						<div class="form-group has-danger">
+							<label for="freqInput">Frequency - (mins) </label>
+							<input type="text" name="trainFreq" class="form-control form-control-danger" id="freqInput" placeholder="15">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-dark myInput" id="submit">Add Train</button>
+						</div>
+					</form>
+				</div>
+			</div>
+				<div class="col-12 col-sm-9 col-lg-9" id="gifV">
+				<div class="row">
+					<table class="table table-hover table-responsive" id="trainTable">
+						<thead>
+							<tr>
+								<th class="titleTh" colspan="5">
+								<h4 id="title">Current Train Schedule</h4>
+								</th>
+							</tr>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody id="trainTable">
+							<tr></tr>
+						</tbody>
+					</table>
+				</div>	
+				</div>
+			</div>
+		</div>
+		<!-- JavaScript -->
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<!-- Bootstrap -->		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- Firebase Reference -->
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+		<!-- Moment.js Reference -->
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>	
+		<script src="assets/javascript/javascript.js"></script>
+	</body>
+</html>

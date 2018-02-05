@@ -1,0 +1,202 @@
+/*---- GENERAL CSS ----*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+   background-color: #463a56; 
+}
+
+p {
+	float: left;
+}
+
+h1, h3 {
+	display: inline-block;
+	text-align: left
+}
+
+h3 {
+	float: left;
+	margin: 10px 0 0 0;
+	font-size: 150%;
+}
+
+h1 {
+	float: right;
+}
+
+span {
+	font-size: 60%;
+}
+
+form {
+	margin: 0 0 0 0;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+label {
+	font-size: 85%;
+	padding: 0 5px 0 5px;
+	margin: 0 0 0 0;
+	color: #545454;
+} 
+
+/*---- CLASS CSS ----*/
+
+.table th {
+	/*background-color: #000;*/
+	color: #fff;
+    width: 5%;
+	padding: 0 0 5px 10px;
+    border-top: 0px solid #000;
+    border-bottom: 0px solid #000;
+}
+
+.table thead th {
+    border-top: 0px solid #000;
+    border-bottom: 0px solid #000;
+}
+
+.table thead {
+	background-image: url(../images/chooChooTable.png); 	
+}
+
+.table tbody td {
+	color: #545454;
+}
+
+
+
+.form-group {
+    box-sizing: border-box;
+    padding: 0 10px 0 10px;
+	margin-bottom: .25rem;
+}
+
+.form-control {
+	box-sizing: border-box;	
+	padding: 3px;
+}
+
+.form-control-feedback {
+    font-size: 65%;
+    color: #F00;
+    line-height: 100%;
+    margin: 0 0 0 0;
+    padding: 2px 0 0 2px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 10px;
+}
+	
+.titleTh {
+	text-align: center;
+}
+
+/*---- ID CSS ----*/
+
+#trainTable { 
+	margin: 0 0 0 0;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+#header {
+	background-image: url(../images/chooChoo.png); 
+	width: auto;
+	background-color: #000;
+	color: #fff;
+	box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+}
+
+#title {
+	width: 100%;
+	color: #fff;
+	margin: 0, 0 0 0;
+    padding: 0 0 5px 5px;
+}
+
+#title0 {
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	margin: 0, 0 0 0;
+    padding: 0 0 5px 5px;	
+}
+
+#chooChooChBoogie {
+	float: left;
+	width: 100px;
+	margin-right: 10px;
+	border: 1px solid #545454;
+}
+
+/* MODAL CSS ============================================= */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-1 {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #f00;
+    width: 50%;
+}
+
+/* Modal Content */
+.modal-content-2 {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #3f3;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	text-align: right;
+	margin: -20px 0 0 0;
+    padding: 0 5px 0 0;
+}
+
+.modalCont {
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.pModal {
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
